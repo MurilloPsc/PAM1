@@ -6,16 +6,46 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="56dp"
     tools:showIn="@layout/activity_main">
 
     <Button
         android:id="@+id/btnProcessar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
         android:onClick="onProcessar"
         android:text="@string/Processar"
-        tools:layout_editor_absoluteX="153dp"
-        tools:layout_editor_absoluteY="324dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtNome"
+        app:layout_constraintTop_toBottomOf="@+id/txtNome"
         tools:text="Processar" />
+
+    <TextView
+        android:id="@+id/lblNome"
+        android:layout_width="40dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/nome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/lblNome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lblNome" />
+
 
 </android.support.constraint.ConstraintLayout>
